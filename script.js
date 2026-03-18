@@ -15,6 +15,9 @@ the game 5 times. The best of Five wins.
 
 new feature = if any player is 3 points ahead 
 is automatically declared a winner. */
+
+
+/*comment test for feature test branch*/
 let getHumanChoice = function () {
     let humanChoice = window.prompt("Write 'Rock', 'Paper' or Scissors'").toLowerCase();
 
