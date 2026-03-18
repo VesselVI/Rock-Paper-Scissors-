@@ -36,11 +36,10 @@ let getComputerChoice = function () {
 
 
 
- let humanScore = 0;
+let humanScore = 0;
 let computerScore = 0;
 
-<<<<<<< HEAD
-=======
+
 function playRound(ComputerChoice, HumanChoice,) {
 
     if (ComputerChoice === HumanChoice) {
@@ -57,43 +56,43 @@ function playRound(ComputerChoice, HumanChoice,) {
         console.log('The Computer won this round!!!')
         computerScore += 1;
     }
->>>>>>> b4651bf (some changes)
 
-function playGame(){
-            while ( computerScore !== 3 && humanScore !==3){
-               
 
-        function playRound(ComputerChoice, HumanChoice, ){
-        
-            if (ComputerChoice === HumanChoice){
-                alert(`Its a Tie \n computer score: ${computerScore}\n human score: ${humanScore}`);
-                
-            }else if (HumanChoice === "rock" && ComputerChoice === "scissors" ||
-                HumanChoice === "paper" && ComputerChoice === "rock" ||
-                HumanChoice === "scissors" && ComputerChoice === "paper"){
-                humanScore +=1;
-                alert(`YOU won this round!!! \n computer score: ${computerScore}\n human score: ${humanScore}`);
-            } else if (ComputerChoice === "rock" &&  HumanChoice === "scissors" ||
-                ComputerChoice === "paper" &&  HumanChoice === "rock" ||
-                ComputerChoice === "scissors" &&  HumanChoice === "paper"){ 
-               
-                computerScore+=1;
-                 alert(`The Computer won this round!!!\n computer score: ${computerScore}\n human score: ${humanScore}`)
+    function playGame() {
+        while (computerScore !== 3 && humanScore !== 3) {
+
+
+            function playRound(ComputerChoice, HumanChoice,) {
+
+                if (ComputerChoice === HumanChoice) {
+                    alert(`Its a Tie \n computer score: ${computerScore}\n human score: ${humanScore}`);
+
+                } else if (HumanChoice === "rock" && ComputerChoice === "scissors" ||
+                    HumanChoice === "paper" && ComputerChoice === "rock" ||
+                    HumanChoice === "scissors" && ComputerChoice === "paper") {
+                    humanScore += 1;
+                    alert(`YOU won this round!!! \n computer score: ${computerScore}\n human score: ${humanScore}`);
+                } else if (ComputerChoice === "rock" && HumanChoice === "scissors" ||
+                    ComputerChoice === "paper" && HumanChoice === "rock" ||
+                    ComputerChoice === "scissors" && HumanChoice === "paper") {
+
+                    computerScore += 1;
+                    alert(`The Computer won this round!!!\n computer score: ${computerScore}\n human score: ${humanScore}`)
+
+                }
 
             }
 
+            const humanSelection = getHumanChoice();
+            const computerSelection = getComputerChoice();
+
+
+            playRound(computerSelection, humanSelection);
+            console.log(humanSelection);
+            console.log(computerSelection);
+            console.log("Human Score: " + humanScore);
+            console.log("Computer Score: " + computerScore);
         }
-
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
-
-
-        playRound(computerSelection, humanSelection);
-        console.log(humanSelection);
-        console.log(computerSelection);
-        console.log("Human Score: " + humanScore);
-        console.log("Computer Score: " + computerScore);
     }
-}
 
-playGame();
+    playGame();
