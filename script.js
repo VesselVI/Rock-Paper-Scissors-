@@ -15,20 +15,20 @@ the game 5 times. The best of Five wins.
 
 new feature = if any player is 3 points ahead 
 is automatically declared a winner. */
-let getHumanChoice = function(){
+let getHumanChoice = function () {
     let humanChoice = window.prompt("Write 'Rock', 'Paper' or Scissors'").toLowerCase();
-   
+
     return humanChoice;
 };
 
-let getComputerChoice = function (){
+let getComputerChoice = function () {
 
- let computerChoice = Math.floor(Math.random() * 3);
-    if (computerChoice === 0 ){
+    let computerChoice = Math.floor(Math.random() * 3);
+    if (computerChoice === 0) {
         return "rock";
-    }else if (computerChoice === 1){
+    } else if (computerChoice === 1) {
         return "paper";
-    }else if (computerChoice=== 2){
+    } else if (computerChoice === 2) {
         return "scissors";
     }
 };
@@ -39,6 +39,25 @@ let getComputerChoice = function (){
  let humanScore = 0;
 let computerScore = 0;
 
+<<<<<<< HEAD
+=======
+function playRound(ComputerChoice, HumanChoice,) {
+
+    if (ComputerChoice === HumanChoice) {
+        console.log('Its a Tie');
+
+    } else if (HumanChoice === "rock" && ComputerChoice === "scissors" ||
+        HumanChoice === "paper" && ComputerChoice === "rock" ||
+        HumanChoice === "scissors" && ComputerChoice === "paper") {
+        console.log('YOU won this round!!!');
+        humanScore += 1;
+    } else if (ComputerChoice === "rock" && HumanChoice === "scissors" ||
+        ComputerChoice === "paper" && HumanChoice === "rock" ||
+        ComputerChoice === "scissors" && HumanChoice === "paper") {
+        console.log('The Computer won this round!!!')
+        computerScore += 1;
+    }
+>>>>>>> b4651bf (some changes)
 
 function playGame(){
             while ( computerScore !== 3 && humanScore !==3){
