@@ -104,10 +104,6 @@ divScore.style.gap = "50px"
 
 
 
-/*function playGame() {
-    while (computerScore !== 3 && humanScore !== 3) {*/
-
-
 function playRound(ComputerChoice, HumanChoice,) {
 
 
