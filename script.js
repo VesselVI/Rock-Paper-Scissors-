@@ -73,9 +73,10 @@ let computerScore = 0;
 const divScore = document.createElement('div');
 document.body.appendChild(divScore);
 const scoreHuman = document.createElement('h3')
+scoreHuman.textContent = `human score: ${humanScore}`;
 
-
-const scoreComputer = document.createElement('h1')
+const scoreComputer = document.createElement('h3');
+scoreComputer.textContent = `computer score: ${computerScore}`;
 
 divScore.appendChild(scoreHuman)
 divScore.appendChild(scoreComputer)
@@ -109,24 +110,41 @@ divScore.style.gap = "50px"
 
 function playRound(ComputerChoice, HumanChoice,) {
 
+
     if (ComputerChoice === HumanChoice) {
-        alert(`Its a Tie \n computer score: ${computerScore}\n human score: ${humanScore}`);
+
 
     } else if (HumanChoice === "rock" && ComputerChoice === "scissors" ||
         HumanChoice === "paper" && ComputerChoice === "rock" ||
         HumanChoice === "scissors" && ComputerChoice === "paper") {
         humanScore += 1;
-        alert(`YOU won this round!!! \n computer score: ${computerScore}\n human score: ${humanScore}`);
+
     } else if (ComputerChoice === "rock" && HumanChoice === "scissors" ||
         ComputerChoice === "paper" && HumanChoice === "rock" ||
         ComputerChoice === "scissors" && HumanChoice === "paper") {
 
         computerScore += 1;
-        alert(`The Computer won this round!!!\n computer score: ${computerScore}\n human score: ${humanScore}`)
 
-        scoreComputer.textContent = computerScore;
-        scoreHuman.textContent = humanScore;
+
     }
+
+
+    if (computerScore == 5) {
+        scoreComputer.innerText = `You lost the game!!`;
+        humanScore = 0;
+        computerScore = 0;
+        return;
+    } else if (humanScore == 5) {
+        scoreHuman.innerText = `You won the game!!`;
+        humanScore = 0;
+        computerScore = 0;
+        return;
+    } else {
+        scoreComputer.innerText = `computer score: ${computerScore}`;
+        scoreHuman.innerText = `human score: ${humanScore}`;
+    }
+
+
 
 }
 
